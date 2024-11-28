@@ -1,122 +1,29 @@
-*{
-  margin: 0;
-  box-sizing: border-box;
-}
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apenas um jogo">
+    <meta name="author" content="Willian Gabriel Cardoso da Luz">
+    <title>Bannister</title>
+    <link rel="stylesheet" href="Sytle.css"> 
+    <style>@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');</style>
+    </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Bannister</h1>
+      <div class="graficanimation"></div>
 
-body{
-  margin: 0;
-}
-
-.container{
-  background: linear-gradient(45deg, #7d88e8 30%, #4082eb 70%);
-  position: relative;
-  min-height: 100vh;
-  z-index: 0;
-}
-
-.graficanimation{
-  background-image: url(https://media4.giphy.com/media/3dB5OgH1xd4je/giphy.gif?cid=6c09b952qmr4geflktdbh47hhrszkrxxkm9goduygseeoq36&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 350px;
-  height: 250px;
-  z-index: 1;
-  }
-
-.easterbox{
-  display: none;
-}
-
-.easterbox:checked + .easteregg{
-  display: block;
-  height: 300px;
-  width: 300px;
-  background: white;
-  z-index: 4;
-}
-
-.easteregg{
-  position: absolute;
-  right: 8;
-  color: white;
-  transition: color 0.9s ease;
-}
-
-.easteregg:hover{
-  color: red;
-}
-
-.eastereggmoment{
-  display: none;
-  overflow: hidden;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #aa7fc1;
-  height: 35%;
-  width: 85%;
-  border: 3px solid #dc72ef;
-  border-radius: 60px;
-  z-index: 5;
-  transition: opacity 1s ease, transform 0.2s ease;
-}
-
-.easter_gif {
-  background-image: url(https://media2.giphy.com/media/yyoFZ1EjLRkSQ/giphy.gif?cid=6c09b952mx04uhw5hgj5krjtqphr1lmfda2vr26b1lkdpgfy&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-}
-
-
-.easterbox:checked ~ .eastereggmoment {
-  display: block;
-}
-
-.end{
-  width: 100%;
-  height: 20px;
-  background-color: #a384eb;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.title{
-  text-align: center;
-  font-family: "Hammersmith One", Sans-Serif;
-  font-weight: 400;
-  font-size: 80px;
-  color: white;
-}
-
-button{
-  display: inline-block;
-  background: green; color: white;
-  padding: 20px; font-size: 50px;
-  border: 3px solid black; border-radius: 20px;
-  text-decoration: none;
-  box-shadow: 2px 5px 16px gray;
-  z-index: 3;
-}
-
-button:hover{
-  background: #44d416; color: black;
-  box-shadow: 0px 0px 0px;
-  padding: 25px;
-}
-
-#button1{
-  position: absolute;
-  bottom: 25%;
-  right: 60%;
-}
-
-#button2{
-  position: absolute;
-  bottom: 25%;
-  right: 4%;
-}
+      <input id="easter_egg" type="checkbox" class="easterbox">
+      
+      <a href="Play.html">
+      <button id="button1">Play</button></a>
+      <a href="Party.invite.html"><button id="button2">Create</button></a>
+    
+      <div class="end">
+        <label for="easter_egg" class="easteregg">w</label></div>
+        
+     <div class="eastereggmoment"><div class="easter_gif"></div>
+        </div>
+    </div>
+  </body>
+</html>
