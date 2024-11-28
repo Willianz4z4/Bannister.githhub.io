@@ -1,179 +1,172 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Apenas um jogo">
-    <meta name="author" content="Willian Gabriel Cardoso da Luz">
-    <title>Bannister</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+/* Estilo geral */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 
-      /* Estilos comuns */
-      body {
-        font-family: 'Hammersmith One', sans-serif;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: #fff;
-      }
+body {
+  margin: 0;
+}
 
-      .container {
-        text-align: center;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 50px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        width: 80%;
-        max-width: 600px;
-      }
+.container {
+  background: linear-gradient(45deg, #7d88e8 30%, #4082eb 70%);
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
 
-      .title {
-        font-size: 48px;
-        margin-bottom: 20px;
-        color: #f1c40f;
-      }
+.graficanimation {
+  background-image: url(https://media4.giphy.com/media/3dB5OgH1xd4je/giphy.gif?cid=6c09b952qmr4geflktdbh47hhrszkrxxkm9goduygseeoq36&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 350px;
+  height: 250px;
+  z-index: 1;
+}
 
-      .graficanimation {
-        width: 100%;
-        height: 200px;
-        background: url('https://via.placeholder.com/600x200') no-repeat center center;
-        background-size: cover;
-        margin-bottom: 30px;
-        border-radius: 10px;
-        animation: animate 5s infinite alternate;
-      }
+.easterbox {
+  display: none;
+}
 
-      @keyframes animate {
-        0% { transform: scale(1.05); }
-        100% { transform: scale(1); }
-      }
+.easterbox:checked + .easteregg {
+  display: block;
+  height: 300px;
+  width: 300px;
+  background: white;
+  z-index: 4;
+}
 
-      button {
-        background-color: #f1c40f;
-        color: #333;
-        border: none;
-        padding: 15px 30px;
-        font-size: 18px;
-        border-radius: 10px;
-        margin: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
-        width: 200px;
-      }
+.easteregg {
+  position: absolute;
+  right: 8;
+  color: white;
+  transition: color 0.9s ease;
+}
 
-      button:hover {
-        background-color: #e67e22;
-        transform: translateY(-5px);
-      }
+.easteregg:hover {
+  color: red;
+}
 
-      .end {
-        margin-top: 30px;
-        font-size: 14px;
-      }
+.eastereggmoment {
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #aa7fc1;
+  height: 35%;
+  width: 85%;
+  border: 3px solid #dc72ef;
+  border-radius: 60px;
+  z-index: 5;
+  transition: opacity 1s ease, transform 0.2s ease;
+}
 
-      .easteregg {
-        color: #fff;
-        cursor: pointer;
-        text-decoration: underline;
-      }
+.easter_gif {
+  background-image: url(https://media2.giphy.com/media/yyoFZ1EjLRkSQ/giphy.gif?cid=6c09b952mx04uhw5hgj5krjtqphr1lmfda2vr26b1lkdpgfy&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
 
-      .eastereggmoment {
-        display: none;
-        margin-top: 30px;
-        background: #333;
-        padding: 20px;
-        border-radius: 10px;
-      }
+.easterbox:checked ~ .eastereggmoment {
+  display: block;
+}
 
-      #easter_egg:checked + .eastereggmoment {
-        display: block;
-      }
+.end {
+  width: 100%;
+  height: 20px;
+  background-color: #a384eb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 
-      .easter_gif {
-        background: url('https://via.placeholder.com/400x200') no-repeat center center;
-        background-size: cover;
-        width: 100%;
-        height: 200px;
-        border-radius: 10px;
-      }
+.title {
+  text-align: center;
+  font-family: "Hammersmith One", Sans-Serif;
+  font-weight: 400;
+  font-size: 80px;
+  color: white;
+}
 
-      /* Estilos para PC */
-      @media (min-width: 768px) {
-        .container {
-          width: 50%;
-          padding: 60px;
-        }
+button {
+  display: inline-block;
+  background: green;
+  color: white;
+  padding: 20px;
+  font-size: 50px;
+  border: 3px solid black;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 2px 5px 16px gray;
+  z-index: 3;
+}
 
-        .title {
-          font-size: 60px;
-        }
+button:hover {
+  background: #44d416;
+  color: black;
+  box-shadow: 0px 0px 0px;
+  padding: 25px;
+}
 
-        button {
-          width: 250px;
-          font-size: 20px;
-        }
+#button1 {
+  position: absolute;
+  bottom: 25%;
+  right: 60%;
+}
 
-        .graficanimation {
-          height: 250px;
-        }
-      }
+#button2 {
+  position: absolute;
+  bottom: 25%;
+  right: 4%;
+}
 
-      /* Estilos para celular */
-      @media (max-width: 767px) {
-        .container {
-          width: 90%;
-          padding: 30px;
-        }
+/* Media Query para dispositivos maiores (PC) */
+@media (min-width: 768px) {
+  .title {
+    font-size: 90px; /* Aumentando o tamanho do título */
+  }
 
-        .title {
-          font-size: 36px;
-        }
+  .graficanimation {
+    width: 450px; /* Aumentando a largura da animação */
+    height: 300px; /* Aumentando a altura da animação */
+    top: 10%; /* Ajustando a posição */
+    left: 10%;
+  }
 
-        button {
-          width: 100%;
-          font-size: 16px;
-          padding: 12px;
-        }
+  button {
+    padding: 25px;
+    font-size: 60px;
+    width: auto; /* Ajuste de largura para não ocupar toda a tela */
+  }
 
-        .graficanimation {
-          height: 150px;
-        }
+  #button1 {
+    bottom: 20%;
+    right: 60%;
+  }
 
-        .end {
-          font-size: 12px;
-        }
+  #button2 {
+    bottom: 20%;
+    right: 10%;
+  }
 
-        .easteregg {
-          font-size: 14px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">Bannister</h1>
-      <div class="graficanimation"></div>
+  .easteregg {
+    right: 20px; /* Ajustando a posição do easter egg */
+  }
 
-      <input id="easter_egg" type="checkbox" class="easterbox">
-      <a href="Play.html">
-        <button id="button1">Play</button>
-      </a>
-      <a href="Party.invite.html">
-        <button id="button2">Create</button>
-      </a>
+  .easter_gif {
+    height: 100%;
+  }
 
-      <div class="end">
-        <label for="easter_egg" class="easteregg">Descubra um segredo!</label>
-      </div>
-
-      <div class="eastereggmoment">
-        <div class="easter_gif"></div>
-      </div>
-    </div>
-  </body>
-</html> 
+  .eastereggmoment {
+    top: 40%;
+    left: 50%;
+    width: 70%;
+    height: 30%;
+    border-radius: 50px;
+  }
+}
