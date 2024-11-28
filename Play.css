@@ -1,0 +1,50 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container{
+  position: relative;
+  background-image: linear-gradient(45deg, #363ccd, #4eb5df);
+  height: 100vh;
+  z-index: 0;
+}
+
+p{
+  font-size: 22px;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  color: white;
+  word-wrap: break-word;
+}
+
+.insertpin{
+  position: absolute;
+  top: 29%;
+  left: 8%;
+  
+  display: flex;
+  justify-content: space-between;
+  height: 8%;
+  width: 85%;
+}
+
+.box{
+  ime-mode: disable;
+  font-size: 20px;
+  text-align: center;
+  background-image: linear-gradient(45deg, #56cccb, #cf7fe8);
+  margin: 1px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  height: 50px;
+  width: 15%;
+}
+
+.autoscan{
+  border: 3px solid white;
+}
+
+  

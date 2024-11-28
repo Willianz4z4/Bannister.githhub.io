@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  background-image: linear-gradient(45deg, #4585e1, #5b539a);
+  height: 100vh;
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #488ed4, #af69f0d9);
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    height: 80%;
+    width: 90%;
+    z-index: 1;
+    border-radius: 20px;
+  }
+}
+
+.code_text {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  color: #8dbe5f;
+  font-size: 30px;
+  text-align: center;
+}
+
+#create {
+  margin: 0;
+  position: absolute;
+  color: black;
+  top: 20%;
+  left: 12%;
+  font-size: 2.5rem;
+  text-align: center;
+  border: 2px solid #6a1096;
+  border-radius: 20px;
+  width: 70%;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#create:hover {
+  font-size: 2.7rem;
+  color: #65e57a;
+}
+
+.code_rom {
+  font-size: 30px;
+  position: absolute;
+  top: 0%;
+  left: 47%;
+}
+
+.Players {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 28%;
+}
+
+.player_Area {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 2px;
+  position: absolute;
+  top: 58%;
+  left: 0;
+  width: 100%;
+}
+
+.Usersgui {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 2px solid #ac5cb5ce;
+  box-shadow: 3px 3px 2000px;
+  height: 60px;
+  width: 170px;
+  border-radius: 15px;
+  margin: 1px;
+  position: relative;
+}
+
+.Usersgui_img {
+  margin: 3px;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.Usersgui_name {
+  font-size: 1.5rem;
+  margin-left: 3px;
+  color: black;
+}
+
+#max_player {
+  position: absolute;
+  top: 147px;
+  left: 175px;
+  margin: 1px;
+  border: 2px solid #c46868;
+  box-shadow: 3px 3px 2000px;
+  border-radius: 15px;
+  background-color: rgba(197, 210, 138, 0.5);
+  height: 60px;
+  width: 170px;
+  z-index: 5;
+}
+
+#players_more {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+#qrcode_area {
+  position: relative;
+  left: 23%;
+  top: 100px;
+  height: 150;
+  width: 50%;
+}
+
+#qrcode {
+  position: relative;
+  height: auto;
+}

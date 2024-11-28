@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apenas um jogo">
+    <meta name="author" content="Willian Gabriel Cardoso da Luz">
+    <link rel="stylesheet" href="Partycreate.css">
+    <title>Bannister.invite</title>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <p onclick="generate()" id="create">criar sala</p>
+      <p onclick="playeradd()">Clique em mim</p>
+      <div class="menu">
+        <div class="code_text">Seu codigo:</div>
+        <p id="code_room"  class="code_rom"></p>
+        <div class="Players">Jogadores</div>
+        <div id="qrcode_area">
+         <div id="qrcode" onclick="qrcode_zoom()"></div>
+        </div>
+        <div id="playerArea" class="player_Area">
+          <div id="Usersgui" class="Usersgui">
+            <img class="Usersgui_img" src="Img/Bank.png">
+            <p class="Usersgui_name">Bank(🏦)</p>
+            <div id="max_player" style="display:none">
+              <p id="players_more">Nan + Players</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Createmenu.js"></script>
+  </body>
+</html>
