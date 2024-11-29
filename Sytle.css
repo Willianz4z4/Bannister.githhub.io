@@ -17,12 +17,15 @@ body {
 /* Estilo para dispositivos móveis */
 .graficanimation {
   background-image: url(https://media4.giphy.com/media/3dB5OgH1xd4je/giphy.gif?cid=6c09b952qmr4geflktdbh47hhrszkrxxkm9goduygseeoq36&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+  background: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 15%;
   left: 5%;
   width: 350px;
   height: 250px;
   z-index: 1;
+  border-radius: 30px;
 }
 
 .easterbox {
@@ -155,30 +158,36 @@ button:hover {
   }
 }
 
+/* Estilos para telas muito grandes (PC) */
 @media screen and (min-width: 1200px) {
   .graficanimation {
-    width: 600px;
-    height: 400px;
-    top: 15%;
-    left: 15%;
+    background-image: url(https://media4.giphy.com/media/ieaUdBJJC19uw/giphy.gif?cid=6c09b952yk9qtwjifjrdp13jmrofhrs7hmewv8agz7xni2p8&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: auto;
+    height: auto; /* Ajusta a altura para manter a proporção */
+    top: 30%; /* Posição centralizada na tela */
+    left: 15%; /* Alinha à esquerda com uma margem */
+    z-index: 9; /* Garante que a animação fique acima de outros elementos */
   }
 
-  .title {
-    font-size: 80px;
-  }
-
-  button {
-    padding: 25px;
-    font-size: 40px;
-  }
-
+  /* Ajuste da posição dos botões */
   #button1 {
-    bottom: 15%;
-    left: 30%;
+    bottom: 20%;
+    left: 30%; /* Ajusta a posição do primeiro botão */
   }
 
   #button2 {
-    bottom: 15%;
-    left: 55%;
+    bottom: 20%;
+    left: 55%; /* Ajusta a posição do segundo botão */
+  }
+
+  .title {
+    font-size: 80px; /* Aumenta o tamanho do título para telas grandes */
+  }
+
+  button {
+    padding: 30px;
+    font-size: 40px;
   }
 }
