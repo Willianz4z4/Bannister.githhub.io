@@ -14,14 +14,14 @@ body {
   z-index: 0;
 }
 
+/* Estilo para dispositivos móveis */
 .graficanimation {
   background-image: url(https://media4.giphy.com/media/3dB5OgH1xd4je/giphy.gif?cid=6c09b952qmr4geflktdbh47hhrszkrxxkm9goduygseeoq36&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
   position: absolute;
   top: 15%;
   left: 5%;
-  width: 80%;
-  max-width: 350px;
-  height: auto;
+  width: 350px;
+  height: 250px;
   z-index: 1;
 }
 
@@ -39,7 +39,7 @@ body {
 
 .easteregg {
   position: absolute;
-  right: 10px;
+  right: 8px;
   color: white;
   transition: color 0.9s ease;
 }
@@ -89,7 +89,7 @@ body {
   text-align: center;
   font-family: "Hammersmith One", Sans-Serif;
   font-weight: 400;
-  font-size: 6vw; /* Adapta o tamanho ao viewport */
+  font-size: 80px;
   color: white;
 }
 
@@ -97,8 +97,8 @@ button {
   display: inline-block;
   background: green;
   color: white;
-  padding: 5vw;
-  font-size: 5vw;
+  padding: 20px;
+  font-size: 50px;
   border: 3px solid black;
   border-radius: 20px;
   text-decoration: none;
@@ -110,57 +110,75 @@ button:hover {
   background: #44d416;
   color: black;
   box-shadow: 0px 0px 0px;
-  padding: 6vw;
+  padding: 25px;
 }
 
 #button1 {
   position: absolute;
-  bottom: 30%;
-  right: 65%;
+  bottom: 25%;
+  right: 60%;
 }
 
 #button2 {
   position: absolute;
-  bottom: 30%;
-  right: 5%;
+  bottom: 25%;
+  right: 4%;
 }
 
-/* Responsividade */
-@media screen and (max-width: 768px) {
+/* Estilos para telas maiores (PC e tablets em paisagem) */
+@media screen and (min-width: 768px) {
   .graficanimation {
+    width: 450px;
+    height: 300px;
     top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
+    left: 10%;
   }
 
-  #button1, #button2 {
-    bottom: 20%;
-    width: auto;
-  }
-
-  #button1 {
-    right: 50%;
-    transform: translateX(10%);
-  }
-
-  #button2 {
-    right: 10%;
-  }
-}
-
-@media screen and (max-width: 480px) {
   .title {
-    font-size: 8vw;
+    font-size: 60px;
   }
 
   button {
-    padding: 4vw;
-    font-size: 4vw;
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 15px;
   }
 
+  #button1 {
+    bottom: 20%;
+    left: 35%;
+  }
+
+  #button2 {
+    bottom: 20%;
+    left: 60%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .graficanimation {
-    top: 8%;
-    width: 90%;
+    width: 600px;
+    height: 400px;
+    top: 15%;
+    left: 15%;
+  }
+
+  .title {
+    font-size: 80px;
+  }
+
+  button {
+    padding: 25px;
+    font-size: 40px;
+  }
+
+  #button1 {
+    bottom: 15%;
+    left: 30%;
+  }
+
+  #button2 {
+    bottom: 15%;
+    left: 55%;
   }
 }
