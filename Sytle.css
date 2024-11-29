@@ -1,20 +1,20 @@
-* {
+*{
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
+body{
   margin: 0;
 }
 
-.container {
+.container{
   background: linear-gradient(45deg, #7d88e8 30%, #4082eb 70%);
   position: relative;
   min-height: 100vh;
   z-index: 0;
 }
 
-.graficanimation {
+.graficanimation{
   background-image: url(https://media4.giphy.com/media/3dB5OgH1xd4je/giphy.gif?cid=6c09b952qmr4geflktdbh47hhrszkrxxkm9goduygseeoq36&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g);
   position: absolute;
   top: 15%;
@@ -22,13 +22,13 @@ body {
   width: 350px;
   height: 250px;
   z-index: 1;
-}
+  }
 
-.easterbox {
+.easterbox{
   display: none;
 }
 
-.easterbox:checked + .easteregg {
+.easterbox:checked + .easteregg{
   display: block;
   height: 300px;
   width: 300px;
@@ -36,18 +36,18 @@ body {
   z-index: 4;
 }
 
-.easteregg {
+.easteregg{
   position: absolute;
-  right: 8px;
+  right: 8;
   color: white;
   transition: color 0.9s ease;
 }
 
-.easteregg:hover {
+.easteregg:hover{
   color: red;
 }
 
-.eastereggmoment {
+.eastereggmoment{
   display: none;
   overflow: hidden;
   position: absolute;
@@ -71,11 +71,12 @@ body {
   height: 100%;
 }
 
+
 .easterbox:checked ~ .eastereggmoment {
   display: block;
 }
 
-.end {
+.end{
   width: 100%;
   height: 20px;
   background-color: #a384eb;
@@ -84,7 +85,7 @@ body {
   left: 0;
 }
 
-.title {
+.title{
   text-align: center;
   font-family: "Hammersmith One", Sans-Serif;
   font-weight: 400;
@@ -92,33 +93,29 @@ body {
   color: white;
 }
 
-button {
+button{
   display: inline-block;
-  background: green;
-  color: white;
-  padding: 20px;
-  font-size: 50px;
-  border: 3px solid black;
-  border-radius: 20px;
+  background: green; color: white;
+  padding: 20px; font-size: 50px;
+  border: 3px solid black; border-radius: 20px;
   text-decoration: none;
   box-shadow: 2px 5px 16px gray;
   z-index: 3;
 }
 
-button:hover {
-  background: #44d416;
-  color: black;
+button:hover{
+  background: #44d416; color: black;
   box-shadow: 0px 0px 0px;
   padding: 25px;
 }
 
-#button1 {
+#button1{
   position: absolute;
   bottom: 25%;
   right: 60%;
 }
 
-#button2 {
+#button2{
   position: absolute;
   bottom: 25%;
   right: 4%;
